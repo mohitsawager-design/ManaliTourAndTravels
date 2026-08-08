@@ -250,11 +250,9 @@ const Footer = () => {
                 <FaPhoneAlt className="mt-1 shrink-0 text-sm text-cyan-400" />
 
                 <div>
-                  <p className="text-xs text-slate-500">Call Us</p>
-
                   <a
                     href="tel:+919876543210"
-                    className="mt-1 block text-sm text-slate-300 transition hover:text-cyan-400"
+                    className=" block text-sm text-slate-300 transition hover:text-cyan-400"
                   >
                     +91 98765 43210
                   </a>
@@ -266,11 +264,9 @@ const Footer = () => {
                 <FaEnvelope className="mt-1 shrink-0 text-sm text-cyan-400" />
 
                 <div>
-                  <p className="text-xs text-slate-500">Email</p>
-
                   <a
                     href="mailto:hello@manalitours.com"
-                    className="mt-1 block text-sm text-slate-300 transition hover:text-cyan-400"
+                    className=" block text-sm text-slate-300 transition hover:text-cyan-400"
                   >
                     hello@manalitours.com
                   </a>
@@ -282,9 +278,7 @@ const Footer = () => {
                 <FaMapMarkerAlt className="mt-1 shrink-0 text-sm text-cyan-400" />
 
                 <div>
-                  <p className="text-xs text-slate-500">Visit Us</p>
-
-                  <p className="mt-1 text-sm leading-6 text-slate-300">
+                  <p className="text-sm leading-6 text-slate-300">
                     Mall Road,
                     <br />
                     Manali, Himachal Pradesh

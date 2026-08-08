@@ -1,4 +1,4 @@
-import {FaMapMarkerAlt} from "react-icons/fa";
+import { FaMapMarkerAlt } from "react-icons/fa";
 import manali from "../public/images/manali.jpg";
 import kasol from "../public/images/malana.jpg";
 import shimla from "../public/images/shimla.jpg";
@@ -40,7 +40,7 @@ const destinations = [
 
 const PopularDestinations = () => {
   return (
-    <section className="bg-white py-24">
+    <section id="popularDestinations" className="bg-white py-24">
       <div className="mx-auto max-w-7xl px-6">
         {/* Heading */}
         <div className="text-center">

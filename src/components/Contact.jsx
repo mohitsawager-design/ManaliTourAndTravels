@@ -7,7 +7,10 @@ import {
 
 const Contact = () => {
   return (
-    <section className="relative overflow-hidden bg-[#eef7f8] px-4 py-20 sm:px-6 lg:px-8">
+    <section
+      id="contact"
+      className="relative overflow-hidden bg-[#eef7f8] px-4 py-20 sm:px-6 lg:px-8"
+    >
       {/* Decorative Background */}
       <div className="absolute -left-32 top-20 h-80 w-80 rounded-full bg-cyan-300/30 blur-3xl" />
       <div className="absolute -right-32 bottom-0 h-96 w-96 rounded-full bg-blue-300/30 blur-3xl" />

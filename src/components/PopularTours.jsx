@@ -12,7 +12,10 @@ import { tours } from "../data/tourData";
 
 const PopularTours = () => {
   return (
-    <section className="bg-[#eef7f8] px-4 py-20 sm:px-6 lg:px-8">
+    <section
+      id="popularTours"
+      className="bg-[#eef7f8] px-4 py-20 sm:px-6 lg:px-8"
+    >
       <div className="mx-auto max-w-7xl">
         {/* Header */}
         <div className="mx-auto max-w-2xl text-center">

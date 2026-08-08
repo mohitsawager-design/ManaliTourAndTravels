@@ -138,7 +138,10 @@ const Feedback = () => {
   }, [maxIndex]);
 
   return (
-    <section className="relative overflow-hidden bg-white px-4 py-20 sm:px-6 lg:px-8">
+    <section
+      id="feedback"
+      className="relative overflow-hidden bg-white px-4 py-20 sm:px-6 lg:px-8"
+    >
       {/* Background Decorations */}
       <div className="absolute -left-40 top-20 h-80 w-80 rounded-full bg-cyan-300/20 blur-3xl" />
 

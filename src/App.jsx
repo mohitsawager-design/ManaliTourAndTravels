@@ -10,6 +10,7 @@ import Footer from "./components/Footer.jsx";
 import TourDetails from "./components/TourDetails.jsx";
 
 import { tours } from "./data/tourData";
+import ScrollToTop from "./components/ScrollToTop.jsx";
 
 const Home = () => {
   return (
@@ -19,7 +20,6 @@ const Home = () => {
       <PopularDestinations />
       <Contact />
       <Feedback />
-      <Footer />
     </>
   );
 };
@@ -39,11 +39,15 @@ const TourDetailsPage = () => {
 const App = () => {
   return (
     <BrowserRouter>
+      <ScrollToTop />
+      <Navbar />
+
       <Routes>
         <Route path="/" element={<Home />} />
 
         <Route path="/tour/:slug" element={<TourDetailsPage />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };
