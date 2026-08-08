@@ -21,7 +21,7 @@ const Navbar = () => {
     {
       name: "Tour Packages",
       type: "hash",
-      to: "/#tours",
+      to: "/#",
     },
     {
       name: "Popular Destinations",
