@@ -1,0 +1,38 @@
+<svg width="440" height="140" viewBox="0 0 440 140" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Manali Trails logo</title>
+<desc>Mountain and sun icon in a blue to cyan gradient beside the wordmark Manali Trails</desc>
+<defs>
+<linearGradient id="peakGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#2563eb"/>
+<stop offset="100%" stop-color="#22d3ee"/>
+</linearGradient>
+<linearGradient id="peakGradSoft" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#60a5fa"/>
+<stop offset="100%" stop-color="#67e8f9"/>
+</linearGradient>
+<linearGradient id="sunGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#fde68a"/>
+<stop offset="100%" stop-color="#fbbf24"/>
+</linearGradient>
+<linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+<stop offset="0%" stop-color="#0ea5e9"/>
+<stop offset="100%" stop-color="#0369a1"/>
+</linearGradient>
+</defs>
+
+<circle cx="70" cy="70" r="62" fill="#0b1220"/>
+<circle cx="70" cy="70" r="62" fill="url(#peakGrad)" fill-opacity="0.18"/>
+<circle cx="70" cy="70" r="61" fill="none" stroke="url(#peakGrad)" stroke-width="1.5" stroke-opacity="0.6"/>
+
+<circle cx="88" cy="46" r="12" fill="url(#sunGrad)"/>
+
+<path d="M22 96 L52 46 L68 72 L80 54 L118 96 Z" fill="url(#peakGradSoft)" fill-opacity="0.55"/>
+<path d="M22 96 L58 40 L94 96 Z" fill="url(#peakGrad)"/>
+<path d="M58 40 L70 60 L46 60 Z" fill="#ffffff" fill-opacity="0.9"/>
+
+<path d="M20 98 C 40 88, 55 108, 72 92 C 88 78, 100 100, 120 90" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-opacity="0.85"/>
+
+<text x="152" y="72" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700" fill="#0369a1">Manali</text>
+<text x="152" y="104" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700" fill="#0f172a">Trails</text>
+<text x="153" y="120" font-family="Arial, sans-serif" font-size="11" letter-spacing="3" fill="#64748b">TOUR &amp; TRAVEL</text>
+</svg>
