@@ -19,11 +19,6 @@ const Navbar = () => {
       to: "/#about",
     },
     {
-      name: "Tour Packages",
-      type: "hash",
-      to: "/#",
-    },
-    {
       name: "Popular Destinations",
       type: "hash",
       to: "/#popularDestinations",

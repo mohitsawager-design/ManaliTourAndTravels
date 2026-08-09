@@ -40,7 +40,7 @@ const destinations = [
 
 const PopularDestinations = () => {
   return (
-    <section id="popularDestinations" className="bg-white py-24">
+    <section id="popularDestinations" className="bg-aliceblue py-24">
       <div className="mx-auto max-w-7xl px-6">
         {/* Heading */}
         <div className="text-center">

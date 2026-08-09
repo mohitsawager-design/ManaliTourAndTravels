@@ -33,50 +33,6 @@ const HeroContent = () => {
           Explore Tours
           <FaArrowRight className="transition group-hover:translate-x-1" />
         </button>
-
-        <button
-          type="button"
-          className="flex cursor-pointer items-center gap-3 rounded-full border border-white/40 bg-white/10 px-8 py-4 font-semibold text-white backdrop-blur-md transition hover:bg-white hover:text-black"
-        >
-          <FaPlay />
-          Watch Video
-        </button>
-      </div>
-
-      {/* Statistics */}
-      <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6">
-        <div className="rounded-2xl border border-white/20 bg-white/10 p-4 text-center backdrop-blur-xl sm:p-6">
-          <h2 className="text-3xl font-bold text-white sm:text-4xl">500+</h2>
-
-          <p className="mt-2 text-sm text-gray-300 sm:text-base">
-            Happy Travelers
-          </p>
-        </div>
-
-        <div className="rounded-2xl border border-white/20 bg-white/10 p-4 text-center backdrop-blur-xl sm:p-6">
-          <h2 className="text-3xl font-bold text-white sm:text-4xl">50+</h2>
-
-          <p className="mt-2 text-sm text-gray-300 sm:text-base">
-            Tour Packages
-          </p>
-        </div>
-
-        <div className="col-span-2 rounded-2xl border border-white/20 bg-white/10 p-4 text-center backdrop-blur-xl sm:col-span-1 sm:p-6">
-          <h2 className="text-3xl font-bold text-white sm:text-4xl">4.9★</h2>
-
-          <p className="mt-2 text-sm text-gray-300 sm:text-base">
-            Customer Rating
-          </p>
-        </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="mt-10 flex items-center gap-3 text-white">
-        <span className="text-sm uppercase tracking-widest">Scroll</span>
-
-        <div className="flex h-10 w-6 justify-center rounded-full border border-white">
-          <div className="mt-2 h-2 w-2 animate-bounce rounded-full bg-white" />
-        </div>
       </div>
     </div>
   );
