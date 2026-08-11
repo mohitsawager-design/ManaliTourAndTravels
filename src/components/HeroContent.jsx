@@ -1,4 +1,4 @@
-import { FaArrowRight, FaPlay, FaStar } from "react-icons/fa";
+import { FaArrowRight, FaStar } from "react-icons/fa";
 
 const HeroContent = () => {
   return (
@@ -24,15 +24,15 @@ const HeroContent = () => {
         Himachal tour packages.
       </p>
 
-      {/* Buttons */}
+      {/* Button */}
       <div className="mt-8 flex flex-wrap gap-5">
-        <button
-          type="button"
+        <a
+          href="#popularTours"
           className="group flex cursor-pointer items-center gap-3 rounded-full bg-linear-to-r from-blue-600 to-cyan-500 px-8 py-4 font-semibold text-white shadow-xl transition duration-300 hover:scale-105"
         >
           Explore Tours
           <FaArrowRight className="transition group-hover:translate-x-1" />
-        </button>
+        </a>
       </div>
     </div>
   );
