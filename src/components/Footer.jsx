@@ -139,7 +139,7 @@ const Footer = () => {
             <ul className="mt-5 space-y-3">
               <li>
                 <a
-                  href="#home"
+                  href="#"
                   className="text-sm text-slate-400 transition hover:text-cyan-400"
                 >
                   Home
@@ -148,7 +148,7 @@ const Footer = () => {
 
               <li>
                 <a
-                  href="#tours"
+                  href="#popularTours"
                   className="text-sm text-slate-400 transition hover:text-cyan-400"
                 >
                   Our Tours
@@ -166,10 +166,10 @@ const Footer = () => {
 
               <li>
                 <a
-                  href="#gallery"
+                  href="#popularDestinations"
                   className="text-sm text-slate-400 transition hover:text-cyan-400"
                 >
-                  Gallery
+                  Popular Destinations
                 </a>
               </li>
 
@@ -193,7 +193,7 @@ const Footer = () => {
             <ul className="mt-5 space-y-3">
               <li>
                 <a
-                  href="#"
+                  href="#popularTours"
                   className="text-sm text-slate-400 transition hover:text-cyan-400"
                 >
                   Manali
@@ -202,7 +202,7 @@ const Footer = () => {
 
               <li>
                 <a
-                  href="#"
+                  href="#popularTours"
                   className="text-sm text-slate-400 transition hover:text-cyan-400"
                 >
                   Solang Valley
@@ -211,7 +211,7 @@ const Footer = () => {
 
               <li>
                 <a
-                  href="#"
+                  href="#popularTours"
                   className="text-sm text-slate-400 transition hover:text-cyan-400"
                 >
                   Rohtang Pass
@@ -220,7 +220,7 @@ const Footer = () => {
 
               <li>
                 <a
-                  href="#"
+                  href="#popularTours"
                   className="text-sm text-slate-400 transition hover:text-cyan-400"
                 >
                   Kasol
@@ -229,7 +229,7 @@ const Footer = () => {
 
               <li>
                 <a
-                  href="#"
+                  href="#popularTours"
                   className="text-sm text-slate-400 transition hover:text-cyan-400"
                 >
                   Shimla
@@ -254,7 +254,7 @@ const Footer = () => {
                     href="tel:+919876543210"
                     className=" block text-sm text-slate-300 transition hover:text-cyan-400"
                   >
-                    +91 98765 43210
+                    +91 70182 12275
                   </a>
                 </div>
               </div>

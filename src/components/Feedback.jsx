@@ -336,13 +336,15 @@ const Feedback = () => {
             </p>
           </div>
 
-          <button
-            type="button"
-            className="group flex shrink-0 items-center gap-3 rounded-xl bg-cyan-400 px-6 py-3.5 font-bold text-slate-900 transition duration-300 hover:bg-cyan-300 hover:shadow-lg hover:shadow-cyan-400/20"
-          >
-            Explore Tours
-            <FaArrowRight className="transition duration-300 group-hover:translate-x-1" />
-          </button>
+          <a href="#popularDestinations">
+            <button
+              type="button"
+              className="hover:cursor-pointer group flex shrink-0 items-center gap-3 rounded-xl bg-cyan-400 px-6 py-3.5 font-bold text-slate-900 transition duration-300 hover:bg-cyan-300 hover:shadow-lg hover:shadow-cyan-400/20"
+            >
+              Explore Tours
+              <FaArrowRight className="transition duration-300 group-hover:translate-x-1" />
+            </button>
+          </a>
         </div>
       </div>
     </section>
