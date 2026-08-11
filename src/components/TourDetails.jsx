@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import {
@@ -16,6 +16,78 @@ import {
 } from "react-icons/fa";
 
 const TourDetails = ({ tour, isCouple = false }) => {
+  /* ================================================= */
+  /* BOOKING FORM STATE */
+  /* ================================================= */
+
+  const [bookingData, setBookingData] = useState({
+    name: "",
+    phone: "",
+    travelDate: "",
+    travelers: isCouple ? "2" : "4",
+    pickupLocation: "",
+    message: "",
+  });
+
+  /* ================================================= */
+  /* WHATSAPP BOOKING */
+  /* ================================================= */
+
+  const handleBooking = () => {
+    if (!bookingData.name.trim()) {
+      alert("Please enter your name.");
+      return;
+    }
+
+    if (!bookingData.phone.trim()) {
+      alert("Please enter your phone number.");
+      return;
+    }
+
+    if (!bookingData.travelDate) {
+      alert("Please select your travel date.");
+      return;
+    }
+
+    const whatsappNumber = "7018212275";
+    // Replace with your actual WhatsApp number.
+    // Example: 919876543210
+
+    const priceType = isCouple ? "per couple" : tour.priceText || "per person";
+
+    const message = `
+Hello, I am interested in booking a tour package.
+
+*PACKAGE DETAILS*
+Package: ${tour.title}
+Location: ${tour.location}
+Duration: ${tour.duration}
+Starting Price: ${tour.price} ${priceType}
+
+*TRAVEL DETAILS*
+Travel Date: ${bookingData.travelDate}
+Number of Travelers: ${bookingData.travelers}
+
+*CUSTOMER DETAILS*
+Name: ${bookingData.name}
+Phone: ${bookingData.phone}
+Pickup Location: ${bookingData.pickupLocation || "Not provided"}
+
+*SPECIAL REQUIREMENTS*
+${bookingData.message || "No special requirements"}
+
+Please share the final price and availability for this package.
+
+Thank you.
+    `.trim();
+
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+      message,
+    )}`;
+
+    window.open(whatsappUrl, "_blank");
+  };
+
   /* ================================================= */
   /* NOT FOUND */
   /* ================================================= */
@@ -49,6 +121,10 @@ const TourDetails = ({ tour, isCouple = false }) => {
       </main>
     );
   }
+
+  /* ================================================= */
+  /* MAIN */
+  /* ================================================= */
 
   return (
     <main className="min-h-screen bg-slate-50">
@@ -433,6 +509,14 @@ const TourDetails = ({ tour, isCouple = false }) => {
 
                       <input
                         type="date"
+                        value={bookingData.travelDate}
+                        onChange={(e) =>
+                          setBookingData((prev) => ({
+                            ...prev,
+                            travelDate: e.target.value,
+                          }))
+                        }
+                        min={new Date().toISOString().split("T")[0]}
                         className={`w-full rounded-xl border border-slate-200 bg-slate-50 py-3.5 pl-11 pr-4 text-sm text-slate-700 outline-none transition focus:bg-white focus:ring-4 ${
                           isCouple
                             ? "focus:border-[#8f4a59] focus:ring-[#8f4a59]/10"
@@ -442,47 +526,179 @@ const TourDetails = ({ tour, isCouple = false }) => {
                     </div>
                   </div>
 
-                  {/* Number of Travelers - TOUR ONLY */}
-                  {!isCouple && (
-                    <div>
-                      <label className="mb-2 block text-sm font-semibold text-slate-700">
-                        Number of Travelers
-                      </label>
+                  {/* Number of Travelers */}
+                  <div>
+                    <label className="mb-2 block text-sm font-semibold text-slate-700">
+                      {isCouple ? "Number of People" : "Number of Travelers"}
+                    </label>
 
-                      <div className="relative">
-                        <FaUsers className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" />
+                    <div className="relative">
+                      <FaUsers className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" />
 
-                        <select
-                          defaultValue="4"
-                          className="w-full appearance-none rounded-xl border border-slate-200 bg-slate-50 py-3.5 pl-11 pr-4 text-sm text-slate-700 outline-none transition focus:border-cyan-500 focus:bg-white focus:ring-4 focus:ring-cyan-500/10"
-                        >
-                          <option value="4">4 Travelers</option>
+                      <select
+                        value={bookingData.travelers}
+                        onChange={(e) =>
+                          setBookingData((prev) => ({
+                            ...prev,
+                            travelers: e.target.value,
+                          }))
+                        }
+                        className={`w-full appearance-none rounded-xl border border-slate-200 bg-slate-50 py-3.5 pl-11 pr-4 text-sm text-slate-700 outline-none transition focus:bg-white focus:ring-4 ${
+                          isCouple
+                            ? "focus:border-[#8f4a59] focus:ring-[#8f4a59]/10"
+                            : "focus:border-cyan-500 focus:ring-cyan-500/10"
+                        }`}
+                      >
+                        {isCouple ? (
+                          <>
+                            <option value="2">2 People</option>
 
-                          <option value="5">5 Travelers</option>
+                            <option value="3">3 People</option>
 
-                          <option value="6">6 Travelers</option>
+                            <option value="4">4 People</option>
 
-                          <option value="7">7 Travelers</option>
+                            <option value="5">5 People</option>
 
-                          <option value="8">8 Travelers</option>
+                            <option value="6">6 People</option>
+                          </>
+                        ) : (
+                          <>
+                            <option value="4">4 Travelers</option>
 
-                          <option value="10">10+ Travelers</option>
-                        </select>
-                      </div>
+                            <option value="5">5 Travelers</option>
+
+                            <option value="6">6 Travelers</option>
+
+                            <option value="7">7 Travelers</option>
+
+                            <option value="8">8 Travelers</option>
+
+                            <option value="9">9 Travelers</option>
+
+                            <option value="10">10 Travelers</option>
+
+                            <option value="10+">10+ Travelers</option>
+                          </>
+                        )}
+                      </select>
                     </div>
-                  )}
+                  </div>
 
-                  {/* Book Button */}
+                  {/* Customer Name */}
+                  <div>
+                    <label className="mb-2 block text-sm font-semibold text-slate-700">
+                      Your Name
+                    </label>
+
+                    <input
+                      type="text"
+                      value={bookingData.name}
+                      onChange={(e) =>
+                        setBookingData((prev) => ({
+                          ...prev,
+                          name: e.target.value,
+                        }))
+                      }
+                      placeholder="Enter your name"
+                      className={`w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-sm text-slate-700 outline-none transition focus:bg-white focus:ring-4 ${
+                        isCouple
+                          ? "focus:border-[#8f4a59] focus:ring-[#8f4a59]/10"
+                          : "focus:border-cyan-500 focus:ring-cyan-500/10"
+                      }`}
+                    />
+                  </div>
+
+                  {/* Phone */}
+                  <div>
+                    <label className="mb-2 block text-sm font-semibold text-slate-700">
+                      Phone Number
+                    </label>
+
+                    <input
+                      type="tel"
+                      value={bookingData.phone}
+                      onChange={(e) =>
+                        setBookingData((prev) => ({
+                          ...prev,
+                          phone: e.target.value,
+                        }))
+                      }
+                      placeholder="Enter your phone number"
+                      className={`w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-sm text-slate-700 outline-none transition focus:bg-white focus:ring-4 ${
+                        isCouple
+                          ? "focus:border-[#8f4a59] focus:ring-[#8f4a59]/10"
+                          : "focus:border-cyan-500 focus:ring-cyan-500/10"
+                      }`}
+                    />
+                  </div>
+
+                  {/* Pickup Location */}
+                  <div>
+                    <label className="mb-2 block text-sm font-semibold text-slate-700">
+                      Pickup Location
+                    </label>
+
+                    <div className="relative">
+                      <FaMapMarkerAlt
+                        className={`absolute left-4 top-1/2 -translate-y-1/2 ${
+                          isCouple ? "text-[#8f4a59]" : "text-cyan-500"
+                        }`}
+                      />
+
+                      <input
+                        type="text"
+                        value={bookingData.pickupLocation}
+                        onChange={(e) =>
+                          setBookingData((prev) => ({
+                            ...prev,
+                            pickupLocation: e.target.value,
+                          }))
+                        }
+                        placeholder="e.g. Chandigarh Airport"
+                        className={`w-full rounded-xl border border-slate-200 bg-slate-50 py-3.5 pl-11 pr-4 text-sm text-slate-700 outline-none transition focus:bg-white focus:ring-4 ${
+                          isCouple
+                            ? "focus:border-[#8f4a59] focus:ring-[#8f4a59]/10"
+                            : "focus:border-cyan-500 focus:ring-cyan-500/10"
+                        }`}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Special Requirements */}
+                  <div>
+                    <label className="mb-2 block text-sm font-semibold text-slate-700">
+                      Special Requirements
+                    </label>
+
+                    <textarea
+                      rows="3"
+                      value={bookingData.message}
+                      onChange={(e) =>
+                        setBookingData((prev) => ({
+                          ...prev,
+                          message: e.target.value,
+                        }))
+                      }
+                      placeholder="Any special requirements?"
+                      className={`w-full resize-none rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-sm text-slate-700 outline-none transition focus:bg-white focus:ring-4 ${
+                        isCouple
+                          ? "focus:border-[#8f4a59] focus:ring-[#8f4a59]/10"
+                          : "focus:border-cyan-500 focus:ring-cyan-500/10"
+                      }`}
+                    />
+                  </div>
+
+                  {/* WhatsApp Button */}
                   <button
                     type="button"
+                    onClick={handleBooking}
                     className={`group flex w-full items-center justify-center gap-3 rounded-xl py-4 font-bold text-white shadow-lg transition duration-300 hover:scale-[1.02] ${
                       isCouple
                         ? "bg-gradient-to-r from-[#8f4a59] to-[#6f3543] shadow-[#6f3543]/20 hover:from-[#7d3f4d] hover:to-[#5d2b37]"
                         : "bg-gradient-to-r from-blue-600 to-cyan-500 shadow-blue-500/20"
                     }`}
                   >
-                    {isCouple ? "Book Couple Package" : "Book This Tour"}
-
+                    Enquire on WhatsApp
                     <FaArrowRight className="transition group-hover:translate-x-1" />
                   </button>
                 </div>

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   FaArrowRight,
   FaEnvelope,
@@ -6,6 +7,48 @@ import {
 } from "react-icons/fa";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    package: "",
+    travelers: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // WhatsApp number
+    const whatsappNumber = "7018212275";
+
+    const whatsappMessage = `
+🌄 *New Tour Enquiry*
+
+👤 *Name:* ${formData.name}
+📞 *Phone:* ${formData.phone}
+📧 *Email:* ${formData.email}
+🏔️ *Tour Package:* ${formData.package}
+👥 *Travelers:* ${formData.travelers}
+
+💬 *Message:*
+${formData.message}
+    `;
+
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+      whatsappMessage,
+    )}`;
+
+    window.open(whatsappURL, "_blank");
+  };
+
   return (
     <section
       id="contact"
@@ -47,7 +90,6 @@ const Contact = () => {
         <div className="grid gap-6 lg:grid-cols-5">
           {/* Left Contact Card */}
           <div className="relative overflow-hidden rounded-[2rem] bg-slate-900 p-7 text-white sm:p-9 lg:col-span-2">
-            {/* Gradient */}
             <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-cyan-500/20 blur-3xl" />
             <div className="absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-blue-600/20 blur-3xl" />
 
@@ -149,7 +191,7 @@ const Contact = () => {
               </p>
             </div>
 
-            <form className="space-y-5">
+            <form onSubmit={handleSubmit} className="space-y-5">
               {/* Name + Phone */}
               <div className="grid gap-5 sm:grid-cols-2">
                 <div>
@@ -159,6 +201,10 @@ const Contact = () => {
 
                   <input
                     type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
                     placeholder="John Doe"
                     className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-cyan-500 focus:bg-white focus:ring-4 focus:ring-cyan-500/10"
                   />
@@ -171,6 +217,10 @@ const Contact = () => {
 
                   <input
                     type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    required
                     placeholder="+91 XXXXX XXXXX"
                     className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-cyan-500 focus:bg-white focus:ring-4 focus:ring-cyan-500/10"
                   />
@@ -185,6 +235,9 @@ const Contact = () => {
 
                 <input
                   type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   placeholder="you@example.com"
                   className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-cyan-500 focus:bg-white focus:ring-4 focus:ring-cyan-500/10"
                 />
@@ -198,17 +251,61 @@ const Contact = () => {
                   </label>
 
                   <select
-                    defaultValue=""
+                    name="package"
+                    value={formData.package}
+                    onChange={handleChange}
+                    required
                     className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-slate-600 outline-none transition focus:border-cyan-500 focus:bg-white focus:ring-4 focus:ring-cyan-500/10"
                   >
                     <option value="" disabled>
                       Choose package
                     </option>
-                    <option value="manali">Manali Tour</option>
-                    <option value="himachal">Himachal Tour</option>
-                    <option value="honeymoon">Honeymoon</option>
-                    <option value="adventure">Adventure</option>
-                    <option value="custom">Custom Package</option>
+
+                    <option value="Manali Adventure Tour">
+                      Manali Adventure Tour
+                    </option>
+
+                    <option value="Manali Local Sightseeing">
+                      Manali Local Sightseeing
+                    </option>
+
+                    <option value="Solang Valley Adventure">
+                      Solang Valley Adventure
+                    </option>
+
+                    <option value="Atal Tunnel & Sissu Tour">
+                      Atal Tunnel & Sissu Tour
+                    </option>
+
+                    <option value="Kullu & Naggar Explorer">
+                      Kullu & Naggar Explorer
+                    </option>
+
+                    <option value="Rohtang Pass Adventure">
+                      Rohtang Pass Adventure
+                    </option>
+
+                    <option value="Manali Jispa Road Trip">
+                      Manali Jispa Road Trip
+                    </option>
+
+                    <option value="Kasol & Manikaran Tour">
+                      Kasol & Manikaran Tour
+                    </option>
+
+                    <option value="Kasol & Tosh Adventure">
+                      Kasol & Tosh Adventure
+                    </option>
+
+                    <option value="Spiti Valley Adventure">
+                      Spiti Valley Adventure
+                    </option>
+
+                    <option value="Manali to Leh Adventure">
+                      Manali to Leh Adventure
+                    </option>
+
+                    <option value="Custom Package">Custom Package</option>
                   </select>
                 </div>
 
@@ -218,22 +315,26 @@ const Contact = () => {
                   </label>
 
                   <select
-                    defaultValue=""
+                    name="travelers"
+                    value={formData.travelers}
+                    onChange={handleChange}
+                    required
                     className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-slate-600 outline-none transition focus:border-cyan-500 focus:bg-white focus:ring-4 focus:ring-cyan-500/10"
                   >
                     <option value="" disabled>
                       Number of people
                     </option>
-                    <option value="1">1 People</option>
-                    <option value="2">2 People</option>
-                    <option value="3">3 People</option>
-                    <option value="4">4 People</option>
-                    <option value="5">5 People</option>
-                    <option value="6">6 People</option>
-                    <option value="7">7 People</option>
-                    <option value="8">8 People</option>
-                    <option value="9">9 People</option>
-                    <option value="10+">10+ People</option>
+
+                    <option value="1 Person">1 Person</option>
+                    <option value="2 People">2 People</option>
+                    <option value="3 People">3 People</option>
+                    <option value="4 People">4 People</option>
+                    <option value="5 People">5 People</option>
+                    <option value="6 People">6 People</option>
+                    <option value="7 People">7 People</option>
+                    <option value="8 People">8 People</option>
+                    <option value="9 People">9 People</option>
+                    <option value="10+ People">10+ People</option>
                   </select>
                 </div>
               </div>
@@ -245,7 +346,11 @@ const Contact = () => {
                 </label>
 
                 <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   rows="4"
+                  required
                   placeholder="When are you planning to travel? What places would you like to visit?"
                   className="w-full resize-none rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-cyan-500 focus:bg-white focus:ring-4 focus:ring-cyan-500/10"
                 />

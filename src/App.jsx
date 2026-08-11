@@ -11,6 +11,7 @@ import TourDetails from "./components/TourDetails.jsx";
 import About from "./components/About.jsx";
 import CouplePackages from "./components/CouplePackages.jsx";
 import ScrollToTop from "./components/ScrollToTop.jsx";
+import WhatsAppButton from "./components/WhatsAppButton.jsx";
 
 import { tours } from "./data/tourData";
 import { couplePackages } from "./data/coupleData";
@@ -77,7 +78,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <ScrollToTop />
-
+      <WhatsAppButton />
       <Routes>
         {/* Home */}
         <Route path="/" element={<Home />} />

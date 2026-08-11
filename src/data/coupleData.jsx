@@ -2,8 +2,13 @@ import manali from "../public/images/manali.jpg";
 import kasol from "../public/images/malana.jpg";
 import shimla from "../public/images/shimla.jpg";
 import solang from "../public/images/solang.jpg";
+import spiti from "../public/images/spiti.jpg";
+import leh from "../public/images/shimla.jpg";
 
 export const couplePackages = [
+  // =========================================================
+  // 1. MANALI ROMANTIC ESCAPE
+  // =========================================================
   {
     id: 1,
     slug: "manali-romantic-escape",
@@ -29,7 +34,7 @@ export const couplePackages = [
     rating: "4.9",
 
     description:
-      "Escape together, explore together, and create beautiful memories with our specially curated Himachal couple packages.",
+      "Enjoy a romantic Manali getaway with beautiful local sightseeing, Solang Valley adventures and memorable mountain experiences.",
 
     stay: "3 Nights Hotel Stay",
 
@@ -39,34 +44,57 @@ export const couplePackages = [
       {
         day: 1,
 
-        title: "Arrival in Manali",
+        title: "Manali Local Sightseeing",
 
         description:
-          "Arrive in Manali, check in to your hotel and enjoy a relaxing evening together.",
+          "After breakfast, visit Hadimba Temple, Mall Road, Van Vihar, Buddhist Monastery and Vashishth Temple.",
 
-        places: ["Manali", "Mall Road"],
+        places: [
+          "Hadimba Temple",
+          "Mall Road",
+          "Van Vihar",
+          "Buddhist Monastery",
+          "Vashishth Temple",
+        ],
       },
 
       {
         day: 2,
 
-        title: "Solang Valley",
+        title: "Solang Valley Adventure",
 
         description:
-          "Enjoy beautiful mountain views and spend a memorable day together in Solang Valley.",
+          "Enjoy Solang Valley and adventure activities including zipline, rocket jump, horse ride, yak ride and ATV bike ride. Snow activities depend on the weather.",
 
-        places: ["Solang Valley", "Mountain Views"],
+        places: [
+          "Solang Valley",
+          "Zipline",
+          "Rocket Jump",
+          "Horse Ride",
+          "Yak Ride",
+          "ATV Bike Ride",
+        ],
       },
 
       {
         day: 3,
 
-        title: "Manali Sightseeing",
+        title: "Kullu & Naggar Tour",
 
         description:
-          "Explore the beautiful attractions of Manali and enjoy quality time together.",
+          "Explore Kullu and Naggar with paragliding, river rafting, shawl factory, dry fruit shopping, Vaishno Temple, waterfall and Naggar Castle.",
 
-        places: ["Hadimba Temple", "Vashisht", "Old Manali"],
+        places: [
+          "Kullu",
+          "Naggar",
+          "Paragliding",
+          "River Rafting",
+          "Shawl Factory",
+          "Dry Fruit",
+          "Vaishno Temple",
+          "Waterfall",
+          "Naggar Castle",
+        ],
       },
 
       {
@@ -75,7 +103,7 @@ export const couplePackages = [
         title: "Departure",
 
         description:
-          "Enjoy breakfast and check out from the hotel for your return journey.",
+          "Check out from the hotel and continue your return journey.",
 
         places: ["Manali"],
       },
@@ -91,8 +119,12 @@ export const couplePackages = [
     ],
   },
 
+  // =========================================================
+  // 2. SHIMLA COUPLE RETREAT
+  // =========================================================
   {
     id: 2,
+
     slug: "shimla-couple-retreat",
 
     title: "Shimla Couple Retreat",
@@ -116,7 +148,7 @@ export const couplePackages = [
     rating: "4.8",
 
     description:
-      "Enjoy a romantic escape to Shimla with beautiful mountain views, comfortable stays and memorable experiences.",
+      "Enjoy a romantic escape to Shimla with beautiful mountain views, famous attractions and memorable experiences.",
 
     stay: "3 Nights Hotel Stay",
 
@@ -129,7 +161,7 @@ export const couplePackages = [
         title: "Arrival in Shimla",
 
         description:
-          "Arrive in Shimla, check in to your hotel and relax after your journey.",
+          "Arrive in Shimla, check in to your hotel and enjoy a relaxing evening around Mall Road.",
 
         places: ["Shimla", "Mall Road"],
       },
@@ -139,7 +171,8 @@ export const couplePackages = [
 
         title: "Shimla Sightseeing",
 
-        description: "Explore the beautiful attractions of Shimla together.",
+        description:
+          "Explore the famous attractions of Shimla including Kufri, The Ridge and Mall Road.",
 
         places: ["Kufri", "The Ridge", "Mall Road"],
       },
@@ -147,12 +180,12 @@ export const couplePackages = [
       {
         day: 3,
 
-        title: "Beautiful Shimla",
+        title: "Shimla Local Exploration",
 
         description:
-          "Spend a relaxing day exploring Shimla and enjoying beautiful mountain views.",
+          "Spend a relaxing day exploring Jakhoo Temple and the local market while enjoying beautiful mountain views.",
 
-        places: ["Jakhoo Temple", "Local Market"],
+        places: ["Jakhoo Temple", "Local Market", "Mountain Views"],
       },
 
       {
@@ -160,7 +193,8 @@ export const couplePackages = [
 
         title: "Departure",
 
-        description: "Enjoy breakfast and check out for your return journey.",
+        description:
+          "Enjoy breakfast and check out from the hotel for your return journey.",
 
         places: ["Shimla"],
       },
@@ -176,8 +210,12 @@ export const couplePackages = [
     ],
   },
 
+  // =========================================================
+  // 3. KASOL LOVE ESCAPE
+  // =========================================================
   {
     id: 3,
+
     slug: "kasol-love-escape",
 
     title: "Kasol Love Escape",
@@ -201,7 +239,7 @@ export const couplePackages = [
     rating: "4.8",
 
     description:
-      "Experience the peaceful beauty of Kasol with your special one and enjoy a relaxing mountain getaway.",
+      "Experience the peaceful beauty of Kasol and Manikaran with your special one, surrounded by the scenic Parvati Valley.",
 
     stay: "2 Nights Hotel Stay",
 
@@ -211,34 +249,40 @@ export const couplePackages = [
       {
         day: 1,
 
-        title: "Arrival in Kasol",
+        title: "Kasol Sightseeing",
 
         description:
-          "Arrive in Kasol, check in to your hotel and enjoy the peaceful surroundings.",
+          "Explore Kasol Market, Nature Park and enjoy the beautiful surroundings of the Parvati Valley.",
 
-        places: ["Kasol", "Parvati Valley"],
+        places: ["Kasol Market", "Nature Park", "Parvati Valley"],
       },
 
       {
         day: 2,
 
-        title: "Kasol Exploration",
+        title: "Kasol Adventure",
 
         description:
-          "Explore the beautiful surroundings and enjoy quality time together.",
+          "Enjoy adventure activities including paragliding and river rafting, along with visits to a shawl factory, dry fruit shops and Vaishno Temple.",
 
-        places: ["Kasol", "Parvati River"],
+        places: [
+          "Paragliding",
+          "River Rafting",
+          "Shawl Factory",
+          "Dry Fruit",
+          "Vaishno Temple",
+        ],
       },
 
       {
         day: 3,
 
-        title: "Departure",
+        title: "Manikaran Sightseeing",
 
         description:
-          "Enjoy breakfast before checking out and starting your return journey.",
+          "Visit the famous Manikaran Gurudwara, Shiv Temple and natural hot springs.",
 
-        places: ["Kasol"],
+        places: ["Manikaran Gurudwara", "Shiv Temple", "Hot Spring Water"],
       },
     ],
 
@@ -252,8 +296,12 @@ export const couplePackages = [
     ],
   },
 
+  // =========================================================
+  // 4. SOLANG VALLEY ROMANCE
+  // =========================================================
   {
     id: 4,
+
     slug: "solang-valley-romance",
 
     title: "Solang Valley Romance",
@@ -277,7 +325,7 @@ export const couplePackages = [
     rating: "4.9",
 
     description:
-      "Enjoy a romantic mountain escape surrounded by breathtaking views and beautiful experiences.",
+      "Enjoy a romantic mountain escape with Manali sightseeing, Solang Valley adventures and beautiful Himalayan views.",
 
     stay: "3 Nights Hotel Stay",
 
@@ -287,34 +335,57 @@ export const couplePackages = [
       {
         day: 1,
 
-        title: "Arrival",
+        title: "Manali Local Sightseeing",
 
         description:
-          "Arrive in Himachal Pradesh, check in to your hotel and relax.",
+          "After breakfast, visit Hadimba Temple, Mall Road, Van Vihar, Buddhist Monastery and Vashishth Temple.",
 
-        places: ["Manali", "Solang Valley"],
+        places: [
+          "Hadimba Temple",
+          "Mall Road",
+          "Van Vihar",
+          "Buddhist Monastery",
+          "Vashishth Temple",
+        ],
       },
 
       {
         day: 2,
 
-        title: "Solang Valley",
+        title: "Solang Valley Adventure",
 
         description:
-          "Enjoy breathtaking mountain views and seasonal adventure activities.",
+          "Enjoy Solang Valley and adventure activities including zipline, rocket jump, horse ride, yak ride and ATV bike ride. Snow activities depend on the weather.",
 
-        places: ["Solang Valley", "Mountain Views"],
+        places: [
+          "Solang Valley",
+          "Zipline",
+          "Rocket Jump",
+          "Horse Ride",
+          "Yak Ride",
+          "ATV Bike Ride",
+        ],
       },
 
       {
         day: 3,
 
-        title: "Local Sightseeing",
+        title: "Kullu & Naggar Tour",
 
         description:
-          "Explore beautiful places around Manali and enjoy a memorable day together.",
+          "Explore Kullu and Naggar with paragliding, river rafting, shawl factory, dry fruit shopping, Vaishno Temple, waterfall and Naggar Castle.",
 
-        places: ["Manali", "Old Manali"],
+        places: [
+          "Kullu",
+          "Naggar",
+          "Paragliding",
+          "River Rafting",
+          "Shawl Factory",
+          "Dry Fruit",
+          "Vaishno Temple",
+          "Waterfall",
+          "Naggar Castle",
+        ],
       },
 
       {
@@ -322,7 +393,8 @@ export const couplePackages = [
 
         title: "Departure",
 
-        description: "Enjoy breakfast and check out for your return journey.",
+        description:
+          "Check out from the hotel and continue your return journey.",
 
         places: ["Manali"],
       },
@@ -334,6 +406,259 @@ export const couplePackages = [
       "Dinner",
       "Private Transfers",
       "Sightseeing",
+      "Couple Friendly Stay",
+    ],
+  },
+
+  // =========================================================
+  // 5. SPITI VALLEY ROMANCE
+  // =========================================================
+  {
+    id: 5,
+
+    slug: "spiti-valley-romance",
+
+    title: "Spiti Valley Romance",
+
+    image: spiti,
+
+    duration: "6 Nights / 7 Days",
+
+    price: "₹24,999",
+
+    priceText: "Per Couple",
+
+    tag: "Adventure",
+
+    location: "Spiti Valley, Himachal Pradesh",
+
+    travelers: "2 People",
+
+    group: "Couple Package",
+
+    rating: "4.9",
+
+    description:
+      "Experience an unforgettable Himalayan road trip through Spiti Valley with ancient monasteries, high mountain passes, remote villages and breathtaking landscapes.",
+
+    stay: "6 Nights Hotel / Homestay Stay",
+
+    meals: "Breakfast & Dinner",
+
+    itinerary: [
+      {
+        day: 1,
+
+        title: "Chandigarh — Shimla",
+
+        description:
+          "Begin your Himalayan adventure from Chandigarh and drive towards Shimla.",
+
+        places: ["Chandigarh", "Shimla", "The Ridge"],
+      },
+
+      {
+        day: 2,
+
+        title: "Shimla — Narkanda — Kalpa",
+
+        description:
+          "Drive through beautiful Himalayan landscapes towards Kalpa, enjoying mountain views and traditional villages along the way.",
+
+        places: ["Narkanda", "Rampur", "Kalpa"],
+      },
+
+      {
+        day: 3,
+
+        title: "Kalpa — Nako — Tabo",
+
+        description:
+          "Continue towards Spiti Valley and explore Nako and Tabo with its ancient monastery.",
+
+        places: ["Nako", "Tabo", "Tabo Monastery"],
+      },
+
+      {
+        day: 4,
+
+        title: "Tabo — Dhankar — Kaza",
+
+        description:
+          "Explore Dhankar Monastery and Lake before continuing towards Kaza.",
+
+        places: ["Dhankar", "Dhankar Lake", "Kaza"],
+      },
+
+      {
+        day: 5,
+
+        title: "Kaza — Key — Kibber",
+
+        description:
+          "Explore the spectacular villages around Kaza including Key Monastery, Kibber and Chicham Bridge.",
+
+        places: ["Key Monastery", "Kibber", "Chicham Bridge"],
+      },
+
+      {
+        day: 6,
+
+        title: "Kaza — Chandratal",
+
+        description:
+          "Travel towards Chandratal through the dramatic landscapes of the high Himalayas.",
+
+        places: ["Chandratal", "Kunzum Pass", "Mountain Valleys"],
+      },
+
+      {
+        day: 7,
+
+        title: "Chandratal — Manali",
+
+        description:
+          "Complete your Himalayan adventure with a scenic drive towards Manali.",
+
+        places: ["Chandratal", "Rohtang Region", "Manali"],
+      },
+    ],
+
+    inclusions: [
+      "Hotel / Homestay Stay",
+      "Breakfast",
+      "Dinner",
+      "Private Transfers",
+      "Spiti Valley Sightseeing",
+      "Monastery Visits",
+      "Experienced Mountain Driver",
+      "Couple Friendly Stay",
+    ],
+  },
+
+  // =========================================================
+  // 6. LEH LADAKH ROMANCE
+  // =========================================================
+  {
+    id: 6,
+
+    slug: "leh-ladakh-romance",
+
+    title: "Leh Ladakh Romance",
+
+    image: leh,
+
+    duration: "6 Nights / 7 Days",
+
+    price: "₹29,999",
+
+    priceText: "Per Couple",
+
+    tag: "Premium",
+
+    location: "Leh, Ladakh",
+
+    travelers: "2 People",
+
+    group: "Couple Package",
+
+    rating: "4.9",
+
+    description:
+      "Experience a romantic Himalayan adventure through Leh, Nubra Valley and Pangong Lake with spectacular mountain landscapes and beautiful monasteries.",
+
+    stay: "6 Nights Hotel / Camp Stay",
+
+    meals: "Breakfast & Dinner",
+
+    itinerary: [
+      {
+        day: 1,
+
+        title: "Arrival in Leh",
+
+        description:
+          "Arrive in Leh, check in to your hotel and relax while enjoying the beautiful Himalayan surroundings.",
+
+        places: ["Leh", "Leh Market"],
+      },
+
+      {
+        day: 2,
+
+        title: "Leh Local Sightseeing",
+
+        description:
+          "Explore the famous attractions around Leh including monasteries, palaces and beautiful viewpoints.",
+
+        places: ["Shanti Stupa", "Leh Palace", "Thiksey Monastery"],
+      },
+
+      {
+        day: 3,
+
+        title: "Leh — Nubra Valley",
+
+        description:
+          "Travel towards Nubra Valley through the spectacular mountain route and enjoy the unique Himalayan landscapes.",
+
+        places: ["Khardung La", "Nubra Valley", "Diskit Monastery"],
+      },
+
+      {
+        day: 4,
+
+        title: "Nubra Valley",
+
+        description:
+          "Explore Nubra Valley and enjoy the beautiful mountain landscapes and local attractions.",
+
+        places: ["Diskit", "Hunder", "Nubra Valley"],
+      },
+
+      {
+        day: 5,
+
+        title: "Nubra — Pangong Lake",
+
+        description:
+          "Continue your journey towards the breathtaking Pangong Lake surrounded by spectacular Himalayan landscapes.",
+
+        places: ["Pangong Lake", "Mountain Views"],
+      },
+
+      {
+        day: 6,
+
+        title: "Pangong — Leh",
+
+        description:
+          "Enjoy the scenic journey back towards Leh through the beautiful mountain roads.",
+
+        places: ["Pangong Lake", "Chang La", "Leh"],
+      },
+
+      {
+        day: 7,
+
+        title: "Departure",
+
+        description:
+          "Enjoy breakfast and check out from the hotel for your return journey.",
+
+        places: ["Leh"],
+      },
+    ],
+
+    inclusions: [
+      "Hotel / Camp Stay",
+      "Breakfast",
+      "Dinner",
+      "Private Transfers",
+      "Leh Sightseeing",
+      "Nubra Valley Excursion",
+      "Pangong Lake Excursion",
+      "Experienced Mountain Driver",
       "Couple Friendly Stay",
     ],
   },
